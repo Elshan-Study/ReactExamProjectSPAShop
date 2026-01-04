@@ -4,7 +4,7 @@ import productsReducer from './slices/productsSlice';
 import cartReducer from './slices/cartSlice';
 import favoritesReducer from './slices/favoritesSlice';
 import type { AuthState } from './slices/authSlice';
-import type { ProductsState } from './slices/productsSlice';
+import type {ProductsState} from './slices/productsSlice';
 import type { CartState } from './slices/cartSlice';
 import type { FavoritesState } from './slices/favoritesSlice';
 import { loadFromLocal, saveToLocal } from '../localStorage';
