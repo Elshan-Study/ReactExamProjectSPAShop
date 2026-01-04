@@ -10,9 +10,16 @@ const Home: React.FC = () => {
     return (
         <div>
             <div className="flex items-center justify-between mb-6">
-                <h1 className="text-2xl font-bold">Catalog</h1>
+                <div className="flex items-center gap-3">
+                    <h1 className="text-2xl font-bold">Catalog</h1>
+                </div>
+
                 {currentUser && (
-                    <Link to="/add-product" className="px-4 py-2 rounded text-white" style={{ backgroundColor: 'var(--accent)' }}>
+                    <Link
+                        to="/add-product"
+                        className="px-4 py-2 rounded-md text-white font-semibold shadow transition transform hover:-translate-y-0.5"
+                        style={{ background: 'linear-gradient(90deg, var(--accent), #7c3aed)' }}
+                    >
                         Add product
                     </Link>
                 )}

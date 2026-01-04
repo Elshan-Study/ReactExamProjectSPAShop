@@ -32,24 +32,28 @@ const LoginPage: React.FC = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto bg-white p-6 rounded shadow">
-            <h1 className="text-xl font-bold mb-4">Login</h1>
+        <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6">
+            <h1 className="text-xl font-semibold mb-4">Login</h1>
             {error && <div className="mb-3 text-red-600">{error}</div>}
             <form onSubmit={submit} className="space-y-3">
                 <input
-                    className="w-full border rounded p-2"
+                    className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] transition"
                     placeholder="Email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
                 <input
-                    className="w-full border rounded p-2"
+                    className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] transition"
                     placeholder="Password"
                     type="password"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
-                <button type="submit" className="w-full py-2 rounded text-white" style={{ backgroundColor: 'var(--accent)' }}>
+                <button
+                    type="submit"
+                    className="w-full py-3 rounded-lg text-white font-semibold shadow-md transform transition hover:-translate-y-0.5"
+                    style={{ background: 'linear-gradient(90deg, var(--accent), #fb7185)' }}
+                >
                     Login
                 </button>
             </form>

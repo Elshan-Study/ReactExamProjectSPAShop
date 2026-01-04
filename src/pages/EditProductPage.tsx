@@ -13,11 +13,11 @@ const EditProductPage: React.FC = () => {
     const navigate = useNavigate();
 
     if (!product) {
-        return <div className="text-center py-12">Product not found</div>;
+        return <div className="text-center py-12 text-gray-600">Product not found</div>;
     }
 
     if (!currentUser || product.ownerId !== currentUser.id) {
-        return <div className="text-center py-12">You are not allowed to edit this product.</div>;
+        return <div className="text-center py-12 text-gray-600">You are not allowed to edit this product.</div>;
     }
 
     return (
