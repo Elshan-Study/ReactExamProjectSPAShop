@@ -19,7 +19,7 @@ const authSlice = createSlice({
         register(state, action: PayloadAction<{ name: string; email: string; password: string }>) {
             const { name, email, password } = action.payload;
             const exists = state.users.find(u => u.email === email);
-            if (exists) return; // можно добавить ошибку
+            if (exists) return;
             const user: User = { id: uuidv4(), name, email, password };
             state.users.push(user);
             state.currentUser = user;
